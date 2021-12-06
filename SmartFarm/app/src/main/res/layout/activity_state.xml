@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".StateActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/round_border2"
+            android:orientation="vertical"
+            android:paddingBottom="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="식물 이름"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:background="#444444">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="#999999"
+                    android:padding="16dp"
+                    android:src="@drawable/thermometer" />
+
+                <TextView
+                    android:id="@+id/tvTemp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="36.5"
+                    android:textColor="#FFF"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="ºC"
+                    android:textColor="#FFF"
+                    android:textSize="16sp" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.rey.material.widget.Switch
+                        android:id="@+id/swTemp"
+                        style="@style/Material.Widget.Switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:checked="false"
+                        android:gravity="bottom"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="자동 제어"
+                        android:textColor="#FFF" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+            //온도
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:background="#444444">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="#999999"
+                    android:padding="16dp"
+                    android:src="@drawable/water" />
+
+                <TextView
+                    android:id="@+id/tvWater"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="44.9"
+                    android:textColor="#FFF"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="%"
+                    android:textColor="#FFF"
+                    android:textSize="16sp" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.rey.material.widget.Switch
+                        android:id="@+id/swWater"
+                        style="@style/Material.Widget.Switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:checked="false"
+                        android:gravity="bottom"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="자동 제어"
+                        android:textColor="#FFF" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+            //습도
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:background="#444444">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="#999999"
+                    android:padding="16dp"
+                    android:src="@drawable/co2" />
+
+                <TextView
+                    android:id="@+id/tvCo2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="623"
+                    android:textColor="#FFF"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="ppm"
+                    android:textColor="#FFF"
+                    android:textSize="16sp" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.rey.material.widget.Switch
+                        android:id="@+id/swCo2"
+                        style="@style/Material.Widget.Switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:checked="false"
+                        android:gravity="bottom"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="자동 제어"
+                        android:textColor="#FFF" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+            //이산화 탄소
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:background="#444444">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="#999999"
+                    android:padding="16dp"
+                    android:src="@drawable/light_bulb" />
+
+                <TextView
+                    android:id="@+id/tvLight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textColor="#FFF"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text=""
+                    android:textColor="#FFF"
+                    android:textSize="23sp" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.rey.material.widget.Switch
+                        android:id="@+id/swLight"
+                        style="@style/Material.Widget.Switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:checked="false"
+                        android:gravity="bottom"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="자동 제어"
+                        android:textColor="#FFF" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+            //조도
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/btnSensor"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:text="센서 세부값 확인"
+                android:textColor="#FFF"
+                android:textSize="17sp"
+                app:buttonColor="@color/fbutton_color_asbestos" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:background="#444444">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="#5b5b5b"
+                    android:gravity="center"
+                    android:text="재배기간"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="2021/10/01 12:24(재배 시작)14일/150일"
+                    android:textColor="#FFF"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:background="#444444">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="#5b5b5b"
+                    android:gravity="center"
+                    android:text="식물종류"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="방울 토마토"
+                    android:textColor="#FFF"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:background="#444444">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="#5b5b5b"
+                    android:gravity="center"
+                    android:text="식물구분"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvDivision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="열매식물"
+                    android:textColor="#FFF"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:background="#444444">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="#5b5b5b"
+                    android:gravity="center"
+                    android:text="수동제어"
+                    android:textColor="@color/white" />
+
+                <info.hoang8f.widget.FButton
+                    android:id="@+id/btnWater"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="물주기"
+                    android:textColor="#FFF"
+                    android:textSize="14sp"
+                    app:buttonColor="@color/fbutton_color_asbestos" />
+
+                <info.hoang8f.widget.FButton
+                    android:id="@+id/btnLed"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="LED"
+                    android:textColor="#FFF"
+                    android:textSize="14sp"
+                    app:buttonColor="@color/fbutton_color_asbestos" />
+
+                <info.hoang8f.widget.FButton
+                    android:id="@+id/btnFan"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:text="FAN ON/OFF"
+                    android:textColor="#FFF"
+                    android:textSize="14sp"
+                    app:buttonColor="@color/fbutton_color_asbestos" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

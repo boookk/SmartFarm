@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="selectDivision">
+        <item>관엽 식물</item>
+        <item>뿌리 식물</item>
+        <item>허브 식물</item>
+        <item>화초 식물</item>
+        <item>열매 식물</item>
+        <item>엽채 식물</item>
+    </string-array>
+</resources>

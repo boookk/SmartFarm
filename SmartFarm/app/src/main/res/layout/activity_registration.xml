@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#444444"
+    tools:context=".RegistrationActivity"
+    android:id="@+id/activity_registration">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="168dp"
+        android:src="@drawable/white_leaf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/round_border"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="식 물  이 름"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:background="@drawable/round_border_edittext"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:hint="식물에게 이름을 지어주세요!"
+            android:textSize="17sp"
+            android:singleLine="true"
+            android:lines="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="식 물  종 류"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etType"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:background="@drawable/round_border_edittext"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:hint="ex. 토마토, 바질..."
+            android:textSize="17sp"
+            android:singleLine="true"
+            android:lines="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="식 물  구 분"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:background="@drawable/round_border_edittext"
+            android:elevation="10dp"
+            android:textAlignment="center" />
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnCommit"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="등 록  하 기"
+            android:paddingRight="20dp"
+            app:buttonColor="@color/fbutton_color_asbestos"
+            android:paddingLeft="20dp"
+            android:layout_margin="30dp"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
