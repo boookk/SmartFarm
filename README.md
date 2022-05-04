@@ -23,8 +23,9 @@
 
 ## ✨ Contributors
 <table>
-  <td align="center"><a href="https://github.com/kumnjinwoo"><img src="https://avatars.githubusercontent.com/u/95576638?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kumnjinwoo</b></sub></a><br /></td>
   <tr>
+    <td align="center"><a href="https://github.com/kumnjinwoo"><img src="https://avatars.githubusercontent.com/u/95576638?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kumnjinwoo</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/boookk"><img src="https://avatars.githubusercontent.com/u/76933244?v=4?s=100" width="100px;" alt=""/><br /><sub><b>boookk</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/HiSeungmin"><img src="https://avatars.githubusercontent.com/u/95595047?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SeungMin O</b></sub></a><br /></td>  
   </tr>
+</table>
